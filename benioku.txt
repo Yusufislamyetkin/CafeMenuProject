@@ -1,0 +1,5 @@
+
+*Proje code first ile oluşturulmuştur.
+*ValidationRules'ler tüm yollara dahil edilmemiştir.
+*Database isteğe göre tasarlanmıştır.
+*Proje  1 günde tamamlanmıştır.

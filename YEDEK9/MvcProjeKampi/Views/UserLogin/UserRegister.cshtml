@@ -1,0 +1,149 @@
+﻿@model  EntityLayer.Concrete.User
+@{
+    Layout = null;
+}
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="tr"
+      class="light-style customizer-hide"
+      dir="ltr"
+      data-theme="theme-default"
+      data-assets-path="../assets/"
+      data-template="vertical-menu-template-free">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>Kayıt Ol</title>
+    <link rel="icon" href="~/logo.png">
+
+    <meta name="description" content="" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+          rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/Web2/assets/vendor/fonts/boxicons.css" />
+    <link rel="stylesheet" href="~/Web2/assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="~/Web2/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="~/Web2/assets/css/demo.css" />
+    <link rel="stylesheet" href="~/Web2/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="~/Web2/assets/vendor/css/pages/page-auth.css" />
+    <script src="~/Web2/assets/vendor/js/helpers.js"></script>
+    <script src="~/Web2/assets/js/config.js"></script>
+</head>
+
+<body>
+
+    <div class="container-xxl">
+        <div class="authentication-wrapper authentication-basic container-p-y">
+            <div class="authentication-inner">
+                <!-- Register Card -->
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="mb-2">Şimdi Kayıt Ol 🚀</h4>
+                       
+
+                        @using (Html.BeginForm("UserRegister", "UserLogin", FormMethod.Post))
+                        {
+
+
+
+
+
+
+
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Ad</label>
+                                <input type="text"
+                                       class="form-control"
+                                       id="NAME"
+                                       name="NAME"
+                                       placeholder=""
+                                       autofocus />
+                            </div>
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Soyad</label>
+                                <input type="text"
+                                       class="form-control"
+                                       id="SURNAME"
+                                       name="SURNAME"
+                                       placeholder=""
+                                       autofocus />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Admin Kullanıcı Adı</label>
+                                <input type="text"
+                                       class="form-control"
+                                       id="UserName"
+                                       name="UserName"
+                                       placeholder="Kullanıcı Adınızı Girin"
+                                       autofocus />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Şifre</label>
+                                <input type="password"
+                                       class="form-control"
+                                       id="SALTPASSWORD"
+                                       name="SALTPASSWORD"
+                                       placeholder="***********"
+                                       autofocus />
+                            </div>
+
+
+                            <button class="btn btn-primary d-grid w-100">Kayıt Ol</button>
+                        }
+                        <BR />
+                        <BR />
+                        @if (TempData["AlertMessage"] != null)
+                        {<div class="alert alert-success ">
+                                <strong style="margin-left:750px"> *Başarılı ! </strong>@TempData["AlertMessage"]
+                                <br />
+                            </div>
+
+                        }@if (TempData["AlertMessage2"] != null)
+                        {<div class="alert alert-danger ">
+                                <strong style="margin-left:750px"> *Başarısız ! </strong>@TempData["AlertMessage2"]
+                                <br />
+                            </div>
+
+                        }
+                        <p class="text-center">
+                            <span>Hesabın var mı?</span>
+                            <a href="/UserLogin/Index/">
+                                <span>Giriş Yap</span>
+                            </a>
+                        </p>
+
+                        <p class="text-center">
+                            <span>Ya da</span>
+                            <a href="/Homepage1/Index/">
+                                <span>Menüyü Gör</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Web2/assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="~/Web2/assets/vendor/libs/popper/popper.js"></script>
+    <script src="~/Web2/assets/vendor/js/bootstrap.js"></script>
+    <script src="~/Web2/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="~/Web2/assets/vendor/js/menu.js"></script>
+    <script src="~/Web2/assets/js/main.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>

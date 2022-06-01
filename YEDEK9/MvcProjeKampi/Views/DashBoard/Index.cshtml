@@ -1,0 +1,55 @@
+﻿
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+
+
+
+
+<title>TYT Konu İstatistiği</title>
+<link rel="stylesheet" href="~/Web2/assets/vendor/css/core.css" class="template-customizer-core-css" />
+<link rel="stylesheet" href="~/Web2/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+<script src="~/Web2/assets/vendor/js/bootstrap.js"></script>
+
+
+
+<div class="row" style="margin-top:30px; margin-left:400px;margin-right:400px;">
+
+
+
+
+
+    @foreach (var item in ViewBag.values)
+    {
+
+
+        <div class="col-lg-6 col-md-12 col-6 mb-4" style="width:225px;height:250px;">
+            <div class="card">
+                <div class="card-body">
+                    <span class="fw-semibold d-block mb-1">@item</span>
+
+                    <h3 class="card-title mb-2"></h3>
+
+                 
+
+                </div>
+            </div>
+        </div>
+
+    }
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
